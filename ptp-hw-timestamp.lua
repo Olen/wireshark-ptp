@@ -36,7 +36,7 @@ function fix_ptp.dissector(tvb, pinfo, tree)
     -- Need at least Ethernet (14) + shim (10) + minimal IP (20)
     if tvb:len() < 44 then return end
 
-    -- Match dest MAC: 01:00:5e:00:01:81
+    -- Match dest MAC: 01:00:5e:00:01:81 (multicast PTP address)
     local b0 = tvb(0,1):uint()
     local b1 = tvb(1,1):uint()
     local b2 = tvb(2,1):uint()

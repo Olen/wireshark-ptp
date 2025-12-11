@@ -35,6 +35,9 @@ With this plugin, the packet format is recognized and the Hardware Timestamp is 
 
 <img width="949" height="294" alt="image" src="https://github.com/user-attachments/assets/e06a7a74-5f5c-4c93-8cfb-dd8c50ddafea" />
 
+The `Logical-Link Control` and `Data` sections are still present in the output, but they can be ignored. Removing them from the output requires a PR to wireshark, and currently this plugin is good enough for my use.
+
+
 ## Installation
 Download the file `ptp-hw-timestamp.lua` and put it in your plugins folder - usually something like `$HOME/.config/wireshark/plugins/` and restart wireshark.
 
